@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +6,7 @@ public class FloorMovement : MonoBehaviour
 {
     // Velocidad en la cuál se va a mover la plataforma
     [SerializeField] private float speed = 10f;
-    [SerializeField] public static float deleteAfter = 10f;
+    [SerializeField] public static float deleteAfter = 150f;
     [SerializeField] public static bool continueCreating = true;
 
     // Realiza el movimiento de la plataforma
@@ -21,6 +20,11 @@ public class FloorMovement : MonoBehaviour
         if (transform.position.x > deleteAfter)
         {
             this.gameObject.transform.position = Vector3.zero;
+            this.gameObject.transform.localScale = new Vector3(
+                Random.Range(FloorSpawner.scaleRange.x, FloorSpawner.scaleRange.y),
+                this.gameObject.transform.localScale.y,
+                this.gameObject.transform.localScale.z
+            );
             continueCreating = false;
         }
     }

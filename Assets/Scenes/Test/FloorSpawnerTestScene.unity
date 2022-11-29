@@ -173,8 +173,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floor: {fileID: 405459477}
-  scaleRange: {x: 1, y: 1}
-  offset: 0
+  offset: 10
+  scaleRange: {x: 0, y: 10}
 --- !u!1 &1064238637
 GameObject:
   m_ObjectHideFlags: 0
