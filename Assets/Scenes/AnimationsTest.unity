@@ -642,7 +642,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2706993477122570329, guid: 561a3d9dce403bf4f84ccbf0d036e456, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 2706993477122570329, guid: 561a3d9dce403bf4f84ccbf0d036e456, type: 3}
       propertyPath: m_LocalRotation.w
@@ -675,6 +675,10 @@ PrefabInstance:
     - target: {fileID: 2706993477122570331, guid: 561a3d9dce403bf4f84ccbf0d036e456, type: 3}
       propertyPath: m_Name
       value: PlayerCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 2706993478114905306, guid: 561a3d9dce403bf4f84ccbf0d036e456, type: 3}
+      propertyPath: CameraDistance
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 561a3d9dce403bf4f84ccbf0d036e456, type: 3}
@@ -772,7 +776,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8334041265104170879, guid: 321216fc4a211454e96502e47bcbea9d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 8334041265104170879, guid: 321216fc4a211454e96502e47bcbea9d, type: 3}
       propertyPath: m_LocalRotation.w

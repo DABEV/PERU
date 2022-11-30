@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour, Controls.IPlayerActions
 
     public void OnJump(InputAction.CallbackContext context){
         if(controller.isGrounded){
-            forceMagnitude = 0.3f;
+            forceMagnitude = 0.14f;
         }
         
     }
@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour, Controls.IPlayerActions
     // Update is called once per frame
     void Update()
     {
-        forceMagnitude-= Time.deltaTime;
+        forceMagnitude-= Time.deltaTime *.5f;
         Vector3 movement = new Vector3(
             inputDirection.x / 12,
             forceMagnitude,
