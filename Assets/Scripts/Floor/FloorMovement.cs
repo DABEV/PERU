@@ -19,11 +19,14 @@ public class FloorMovement : MonoBehaviour
         // Si la plataforma se movió más de deleteAfter unidades, entonces destruye el objeto
         if (transform.position.x > deleteAfter)
         {
+            float getRanScaZ = Random.Range(FloorSpawner.scaleRangeZ.x, FloorSpawner.scaleRangeZ.y);
+            float getRanScaX = Random.Range(FloorSpawner.scaleRangeX.x, FloorSpawner.scaleRangeX.y);
+
             this.gameObject.transform.position = Vector3.zero;
             this.gameObject.transform.localScale = new Vector3(
-                Random.Range(FloorSpawner.scaleRange.x, FloorSpawner.scaleRange.y),
+                getRanScaZ,
                 this.gameObject.transform.localScale.y,
-                this.gameObject.transform.localScale.z
+                getRanScaX
             );
             continueCreating = false;
         }
