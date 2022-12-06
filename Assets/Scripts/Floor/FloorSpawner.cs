@@ -5,7 +5,7 @@ using UnityEngine;
 public class FloorSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject floor;
-    [SerializeField] private float offset = 10f;
+    [SerializeField] private float offset = 0f;
     [SerializeField] public static Vector2 scaleRangeZ = new Vector2(1f, 7.5f);
     [SerializeField] public static Vector2 scaleRangeX = new Vector2(1f, 7.5f);
 
@@ -17,7 +17,7 @@ public class FloorSpawner : MonoBehaviour
 
     public IEnumerator SpawnFloors()
     {
-        while (floor.transform.position.x < FloorMovement.deleteAfter && FloorMovement.continueCreating)
+        while (floor.transform.position.z > FloorMovement.deleteAfter && FloorMovement.continueCreating)
         {
             float getRanScaZ = Random.Range(scaleRangeZ.x, scaleRangeZ.y);
             float getRanScaX = Random.Range(scaleRangeX.x, scaleRangeX.y);
@@ -25,11 +25,11 @@ public class FloorSpawner : MonoBehaviour
             // Espera N segundos antes de continuar con la secuencia
             yield return new WaitForSeconds(0.55f);
 
-            // Crea un nuevo objeto de platform en el punto de la derecha con la rotación normal
+            // Crea un nuevo objeto de platform en el punto de la derecha con la rotaciï¿½n normal
             // Retorna el GameObject de la copia
-            GameObject instance = Instantiate(floor, Vector3.right * offset, Quaternion.identity);
+            GameObject instance = Instantiate(floor, Vector3.back * offset, Quaternion.identity);
 
-            // Crea plataformas de diferentes tamaños
+            // Crea plataformas de diferentes tamaï¿½os
             instance.transform.localScale = new Vector3(
                 getRanScaZ,
                 instance.transform.localScale.y,
