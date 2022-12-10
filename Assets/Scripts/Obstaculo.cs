@@ -18,3 +18,10 @@ public class Obstaculo : MonoBehaviour
         }
     }
 }
+// // Vector3 viewPos = cam.WorldToViewportPoint(target.position);
+//         if (viewPos.y > 1F)
+//  sceneManager -> hacemos el cambio de escena "puntaje"
+//             print("target is on the right side!");
+// Link por si hay duda
+// aGREAR UN MINIMO DE LA PLATAFORMA PARA QUE ESTE NO SEA MENOR AL TAMAÑO DEL OBJETO
+// https://docs.unity3d.com/ScriptReference/Camera.WorldToViewportPoint.html
