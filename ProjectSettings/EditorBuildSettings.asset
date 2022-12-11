@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/PERU.unity
+    guid: 2843f6eca38e6e140bc40264c1159459
+  - enabled: 1
+    path: Assets/Scenes/MenuScreeen.unity
+    guid: 6b7e274d58d40fb40af8d6544e360768
   m_configObjects: {}
