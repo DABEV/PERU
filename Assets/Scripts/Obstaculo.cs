@@ -12,7 +12,7 @@ public class Obstaculo : MonoBehaviour
     {
         transform.position += Vector3.back * 5f * Time.deltaTime;
 
-        if (transform.position.z < -30f)
+        if (transform.position.z < -17f)
         {
             Destroy(this.gameObject);
         }
