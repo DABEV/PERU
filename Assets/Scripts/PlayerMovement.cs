@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour, Controls.IPlayerActions
     // Update is called once per frame
     void Update()
     {
-        forceMagnitude-= Time.deltaTime *.5f;
+        forceMagnitude-= Time.deltaTime *.4f;
         Vector3 movement = new Vector3(
             inputDirection.x / 12,
             forceMagnitude,

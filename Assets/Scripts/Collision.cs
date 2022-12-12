@@ -7,9 +7,9 @@ public class Collision : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Obstacle" || transform.position.y < -2)
+        if(other.tag == "Obstacle")
         {
-            SceneManager.LoadScene("MenuScreeen");
+            SceneManager.LoadScene("ScoreScreen");
         }
     }
 }
